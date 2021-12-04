@@ -45,14 +45,11 @@ Using config at /home/pi/dev/deco-rebooter/playwright.config.ts
 
 Running 1 test using 1 worker
 
-  ✓  [chrome] › tests/reboot-all.spec.ts:9:1 › login then reboot all (2m)
-  2021-12-04T01:54:26.349Z Logged in.
-  2021-12-04T01:54:30.003Z Reboot requested.
-  2021-12-04T01:54:30.809Z Work in progress...
-  2021-12-04T01:56:48.423Z Finished.
+  ✓  [chrome] › tests/reboot-all.spec.ts:9:1 › login then reboot all (11s)
+  2021-12-04T03:21:23.857Z Loaded.
+  2021-12-04T03:21:25.243Z Logged in.
+  2021-12-04T03:21:29.711Z Reboot requested.
+  2021-12-04T03:21:32.610Z Confirmed.
 
-  Slow test file: [chrome] › tests/reboot-all.spec.ts (2m)
-  Consider splitting slow test files to speed up parallel execution
-
-  1 passed (2m)
+  1 passed (12s)
 ```
