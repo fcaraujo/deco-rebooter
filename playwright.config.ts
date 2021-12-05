@@ -1,10 +1,19 @@
 import { PlaywrightTestConfig, devices } from '@playwright/test';
 import { TestOptions } from './test-options';
 
-const baseURL = process.env.TP_URL ?? 'not-set';
+// Technicolor
+const tcPwd = process.env.TC_PWD;
+const tcUrl = process.env.TC_URL ?? 'not-set';
+const tcUsr = process.env.TC_USR ?? 'not-set';
+
+// TP-Link Deco
+const tpUrl = process.env.TP_URL ?? 'not-set';
+const tpPwd = process.env.TP_PWD;
+
+// General
 const forbidOnly = !!process.env.CI;
-const password = process.env.TP_PWD;
 const retries = process.env.CI ? 2 : 0;
+const timeout = 60000;
 
 const config: PlaywrightTestConfig<TestOptions> = {
   timeout: 200000,
@@ -12,8 +21,17 @@ const config: PlaywrightTestConfig<TestOptions> = {
   forbidOnly,
   retries,
   use: {
-    baseURL,
-    password,
+    deco: {
+      pwd: tpPwd,
+      timeout,
+      url: tpUrl,
+    },
+    technicolor: {
+      pwd: tcPwd,
+      timeout,
+      url: tcUrl,
+      usr: tcUsr,
+    },
     trace: 'on-first-retry',
   },
   projects: [

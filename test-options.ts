@@ -1,11 +1,33 @@
 import { test as base } from '@playwright/test';
 
+export type DecoOptions ={
+  pwd: string;
+  timeout: number;
+  url: string;
+};
+
+export type TechnicolorOptions ={
+  pwd: string;
+  timeout: number;
+  url: string;
+  usr: string;
+};
+
 export type TestOptions = {
-  password: string;
-  rebootTimeout: number;
+  deco: DecoOptions;
+  technicolor: TechnicolorOptions;
 };
 
 export const test = base.extend<TestOptions>({
-  password: 'not-set',
-  rebootTimeout: 3 * 60 * 1000,
+  deco: {
+    pwd:'not-set',
+    timeout: 0,
+    url: 'not-set',
+  },
+  technicolor:{
+    pwd:'not-set',
+    timeout:0,
+    url:'not-set',
+    usr:'not-set',
+  }
 });
