@@ -25,8 +25,14 @@ PWDEBUG=console npm test
 PWDEBUG=1 npm test
 
 /etc/environment
-TP_PWD="Tple4f9e2f1"
+```
+PLAYWRIGHT_BROWSERS_PATH="/home/pi/browsers"
+TP_PWD="YourPassword"
 TP_URL="http://192.168.68.1/"
+TC_PWD="YourUsername"
+TC_URL="http://192.168.1.1/"
+TC_USR="YourPassword"
+```
 
 ## First run
 
