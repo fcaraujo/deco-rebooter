@@ -1,0 +1,10 @@
+---
+version: '3.2'
+  services:
+    deco-rebooter:
+      build: .
+      container_name: deco-rebooter
+      environment:
+        - A=1
+      network_mode: host
+      
