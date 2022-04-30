@@ -10,8 +10,8 @@ COPY . /e2e
 
 WORKDIR /e2e
 
-RUN npm install --with-deps chromium
+RUN npm install
 
-RUN npx playwright install
+RUN npx playwright install --with-deps chromium
 
 CMD [ "npx", "playwright", "test", "--reporter=list" ]
