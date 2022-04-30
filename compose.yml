@@ -2,9 +2,9 @@
 version: '3.2'
 
 services:
-  A:
+  a:
     build: .
-    container_name: B
+    container_name: b
     environment:
-      - A=1
+      - C=1
     network_mode: host
