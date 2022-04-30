@@ -2,9 +2,13 @@
 version: '3.2'
 
 services:
-  a:
+  pw:
     build: .
     container_name: b
     environment:
-      - C=1
+      - TP_PWD=YourPassword
+      - TP_URL=http://192.168.68.1/
+      - TC_PWD=YourPassword
+      - TC_URL=http://192.168.1.1/
+      - TC_USR=YourUser
     network_mode: host
