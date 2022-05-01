@@ -14,4 +14,4 @@ RUN npm install
 
 RUN npx playwright install --with-deps chromium
 
-CMD [ "npx", "playwright", "test", "--reporter=list" ]
+CMD [ "npx", "playwright", "test", "--reporter=list", "&& echo completed" ]
